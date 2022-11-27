@@ -22,7 +22,8 @@ def insert(fio,age,tel,otd):
         return f' Ошибка при добавлении записи{e}'
     print('Записи добавлены')
 
-#Удаление
+
+# Удаление
 def drop_by_arg(val,col_name='фио'):
     global csv_file
     try:
