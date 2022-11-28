@@ -8,7 +8,7 @@ MENU = {
     '5':'Средний возраст',
     '6':'Сохранить',
     '7':'',
-    '0':''
+    '0': '<-Меню',
     'exit':'Выход'
 }
 for k,v in MENU.items():
@@ -17,7 +17,7 @@ for k,v in MENU.items():
 while True:
     action =input('>_')
     if action=='1':
-        file_open(FILENAME)
+        file_open()
     elif action=='2':
         insert(input('ФИО:'),input('Возраст:'),input('Телефон:'),input('Отдел:'))
     elif action == '3':
@@ -28,5 +28,8 @@ while True:
         save(FILENAME)
     elif action=='7':
         show_rows()
+    elif action == '0':
+        for key, val in MENU.items():
+            print(key, '-', val)
     elif action == 'exit':
         break
